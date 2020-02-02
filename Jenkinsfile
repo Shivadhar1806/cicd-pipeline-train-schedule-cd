@@ -53,6 +53,7 @@ pipeline {
             when {
                 branch 'master'
             }
+            agent { label agentName }
             steps {
                 input 'Does the staging environment look OK?'
                 milestone(1)
